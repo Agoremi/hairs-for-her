@@ -38,7 +38,7 @@ export default function Products(){
               </div>
 
               <div className="overflow-x-auto">
-                <table className="w-full min-w-[620px]">
+                <table className="w-full min-w-155">
                  <thead className="border-b border-gray-300 bg-gray-50">
                   <tr>
                   <th className="py-2 text-left text-[10px] font-semibold font-outfit text-gray-700">PRODUCT</th>
