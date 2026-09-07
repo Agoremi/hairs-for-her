@@ -67,19 +67,18 @@ export default function Shop(){
                </div>
             </div>
 
-            <div className="flex flex-col gap-0 items-center lg:hidden"> {/*title div*/}
+            <div className="flex flex-col gap-0.5 items-center lg:hidden"> {/*title div*/}
                 <div className="flex gap-2 items-center"> {/*title div*/}
-                <span className="h-px w-7.5 bg-linear-to-tr from-[#ffffff] via-[#e88cab] to-[#f7c8d5]"></span>
-                <span><i class="fa-solid fa-star text-[5px] text-[#db6b9a]"></i></span>
-                <p className="text-[11px] font-playfair text-[#db6b9a] tracking-widest font-semibold lg:text-xs">OUR COLLECTION</p>
-                <span><i class="fa-solid fa-star text-[5px] text-[#db6b9a]"></i></span>
-                <span className="h-px w-7.5 bg-linear-to-tl from-[#ffffff] via-[#e88cab] to-[#f7c8d5]"></span>
+                <span className="h-[0.5px] w-6 bg-linear-to-tr from-[#ffffff] via-[#e88cab] to-[#f7c8d5]"></span>
+                <p className="text-[10px] font-montserrat text-[#db6b9a] tracking-widest font-semibold lg:text-xs">OUR COLLECTION</p>
+                <span className="h-[0.5px] w-6 bg-linear-to-tl from-[#ffffff] via-[#e88cab] to-[#f7c8d5]"></span>
                 </div>
-                <h1 className="text-[27px] text-gray-800 font-playfair tracking-wide lg:text-5xl">Luxury Hair, Just for You</h1>
+                <h1 className="text-[27px] text-gray-800 font-playfair tracking-wide lg:text-5xl">Premium Hair Extensions</h1>
+                <p className="text-[9px] text-gray-600 mt-1 font-montserrat font-semibold tracking-widest">BEAUTY . QUALITY . CONFIDENCE</p>
                 <div className="flex gap-2 items-center"> {/*title div*/}
-                    <span className="w-10 h-px bg-linear-to-tl from-[#ffffff] via-[#e88cab] to-[#f7c8d5]"></span>
-                    <span><i class="fa-solid fa-heart text-[6px] text-[#db6b9a]"></i></span>
-                    <span className="w-10 h-px bg-linear-to-tl from-[#ffffff] via-[#e88cab] to-[#f7c8d5]"></span>
+                    <span className="w-10 h-[0.6px] bg-linear-to-tl from-[#ffffff] via-[#e88cab] to-[#f7c8d5]"></span>
+                    <span><i class="fa-solid fa-heart text-[12px] text-[#db6b9a]"></i></span>
+                    <span className="w-10 h-[0.6px] bg-linear-to-tl from-[#ffffff] via-[#e88cab] to-[#f7c8d5]"></span>
                 </div>
             </div>
 

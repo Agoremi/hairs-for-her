@@ -9,7 +9,7 @@ export default function Contact(){
             </div>
 
             <div className="flex-1 flex-col flex w-full lg:flex-row">
-                <div className="flex-1 w-full h-full py-5 lg:pr-10">
+                <div className="flex-1 w-full animate-heroFadeUp h-full py-5 lg:pr-10">
                     <div className="flex flex-col gap-2">
                         <span className="h-px w-10 bg-[#db6b9a]"></span>
                         <h1 className="text-2xl font-outfit">Send us a message</h1>
@@ -18,9 +18,9 @@ export default function Contact(){
                     <Form />
                 </div>
 
-                <div className="flex-1 flex flex-col gap-2 w-full h-full py-5 px-8 lg:pl-10">
+                <div className="flex-1 flex flex-col gap-2 w-full h-full animate-heroImageReveal py-5 px-8 lg:pl-10">
                     <div className="flex flex-col gap-2">
-                        <p className="font-montserrat text-xs text-[#db6b9a] font-semibold tracking-wide">GET IN TOUCH</p>
+                        <p className="font-montserrat text-xs text-[#db6b9a] font-semibold tracking-wider">GET IN TOUCH</p>
                         <h1 className="text-2xl font-outfit">We'd love to hear from you!</h1>
                         <span className="h-px w-10 bg-[#db6b9a]"></span>
                     </div>

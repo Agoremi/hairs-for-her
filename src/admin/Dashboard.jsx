@@ -13,7 +13,7 @@ function Dashboard() {
             type="button"
             onClick={() => setIsSidebarOpen(true)}
             aria-label="Open admin navigation"
-            className="flex h-10 w-10 items-center justify-center rounded border border-gray-200 text-gray-700"
+            className="flex h-10 w-10 items-center justify-center rounded text-gray-700"
           >
             <i className="fa-solid fa-bars" aria-hidden="true"></i>
           </button>

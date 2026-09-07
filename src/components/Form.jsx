@@ -139,7 +139,7 @@ export default function Form(){
                         ></textarea>
                     </div>
                 </div>
-                <button className="bg-black w-full flex items-center justify-center gap-1 text-white font-light text-[13px] font-outfit py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" disabled={isSending}>
+                <button className="bg-black w-full flex items-center justify-center gap-1 text-white font-light text-[13px] font-outfit py-2.5 px-4 rounded lg:py-2 focus:outline-none focus:shadow-outline" type="submit" disabled={isSending}>
                     {isSending ? (
                         <>
                             <span className="h-3 w-3 animate-spin rounded-full border-2 border-white border-t-transparent" />

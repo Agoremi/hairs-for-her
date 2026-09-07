@@ -30,7 +30,7 @@ export default function Overview() {
         <div className="flex w-full flex-4 flex-col p-4 sm:p-5">
             <h1 className="text-2xl font-semibold text-gray-800 font-outfit">Admin Dashboard</h1>
 
-            <div className="grid w-full grid-cols-1 gap-4 py-5 sm:grid-cols-2 md:grid-cols-3 md:gap-5"> {/*Stats Cards*/}
+            <div className="grid w-full grid-cols-1 gap-2 py-5 sm:grid-cols-2 md:grid-cols-3 md:gap-5"> {/*Stats Cards*/}
               <div className="bg-white flex items-center gap-5 p-4 rounded-sm shadow"> {/*Card 1*/}
                 <div className="h-10 w-10 bg-[#fdf2f8] flex items-center justify-center rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97C9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box-icon lucide-box"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
