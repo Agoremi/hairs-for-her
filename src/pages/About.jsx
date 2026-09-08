@@ -1,8 +1,13 @@
 import aboutImage from '../assets/about.png'
+import SEO from "../components/SEO";
 
 export default function About() {
     return (
-    
+        <>
+       <SEO
+       title="About Us | Hairs for Her"
+       description="Learn more about Hairs for Her and our passion for premium hair, beauty and self-expression."
+       />
         <div className="flex-col flex px-6.5 py-5 items-center w-full gap-10 lg:flex-row lg:px-15">
             <div className="flex-1 font-outfit w-full flex flex-col animate-heroFadeUp items-center justify-center h-full"> {/*First info div start*/}
                 <div className="flex flex-col gap-5">
@@ -23,8 +28,9 @@ export default function About() {
                 </div>
             </div> 
             <div className="flex-1 font-outfit w-full flex animate-heroImageReveal flex-col items-center justify-center h-full"> {/*Second info div start*/}
-                <img src={aboutImage} alt="About" className="w-full rounded object-cover" />
+                <img src={aboutImage} alt="About Image" className="w-full rounded object-cover" />
             </div> 
         </div>
+        </>
     )
 }   

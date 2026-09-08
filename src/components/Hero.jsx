@@ -29,7 +29,7 @@ export default function Hero(){
         </div> 
 
         <div className="flex-1 w-full h-full animate-heroImageReveal"> {/*Second image div start*/}
-            <img src={Img} alt="About" className="w-full max-h-80 object-cover lg:max-h-full" />
+            <img src={Img} alt="Hero Image" className="w-full max-h-80 object-cover lg:max-h-full" />
         </div>
     </div>
     )

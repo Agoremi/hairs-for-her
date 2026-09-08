@@ -1,7 +1,13 @@
 import Form from "../components/Form";
+import SEO from "../components/SEO";
 
 export default function Contact(){
     return(
+        <>
+        <SEO
+        title="Contact Us | Hairs for Her"
+        description="Get in touch with Hairs for Her for enquiries, orders and more."
+        />
         <section className="bg-white relative text-black flex flex-col items-center justify-center px-5 py-5 gap-5 lg:px-15">
             <div className="flex items-center gap-2">
                <h1 className="text-base font-montserrat tracking-wide font-semibold">CONTACT US</h1>
@@ -21,7 +27,7 @@ export default function Contact(){
                 <div className="flex-1 flex flex-col gap-2 w-full h-full animate-heroImageReveal py-5 px-8 lg:pl-10">
                     <div className="flex flex-col gap-2">
                         <p className="font-montserrat text-xs text-[#db6b9a] font-semibold tracking-wider">GET IN TOUCH</p>
-                        <h1 className="text-2xl font-outfit">We'd love to hear from you!</h1>
+                        <h2 className="text-2xl font-outfit">We'd love to hear from you!</h2>
                         <span className="h-px w-10 bg-[#db6b9a]"></span>
                     </div>
 
@@ -81,5 +87,6 @@ export default function Contact(){
                 </div>
             </div>
         </section>
+        </>
     )
 }

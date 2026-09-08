@@ -3,6 +3,7 @@ import ShopFooter from "../components/ShopFooter.jsx";
 import Modal from "../components/Modal.jsx";
 import { supabase } from "../lib/supabase.js";
 import { useEffect, useState } from "react";
+import SEO from "../components/SEO.jsx";
 
 export default function Shop(){
 
@@ -47,6 +48,11 @@ export default function Shop(){
     ));
 
     return(
+        <>
+        <SEO
+        title="Shop | Hairs for Her"
+        description="Shop premium hair styles from Hairs for Her, including French curls, Italian curls and bone straight hair."
+        />
         <section className="bg-white flex text-black flex-col items-center justify-center px-2 py-8 lg:px-15">
             <div className="grid-cols-2 gap-4 hidden lg:grid-cols-4 lg:grid"> {/*Shop Nav*/}
                <div className="flex gap-5 rounded-full border border-[#db6b9a] shadow-xs py-2 px-5 items-center justify-center">
@@ -103,5 +109,6 @@ export default function Shop(){
 
             <ShopFooter />
         </section>
+        </>
     )
 }
