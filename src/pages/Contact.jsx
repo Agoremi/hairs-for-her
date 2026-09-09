@@ -48,7 +48,7 @@ export default function Contact(){
                             </div>
                             <div className="flex flex-col gap-1">
                               <h2 className="text-gray-800 font-outfit text-sm font-semibold tracking-wide">Telephone</h2>
-                              <p className="text-xs text-gray-600 font-outfit">+234 801 234 5678</p>
+                              <p className="text-xs text-gray-600 font-outfit">+234 913 042 2775</p>
                               <p className="text-xs font-outift text-gray-500">Mon - Sat, 9:00 AM - 5:00 PM</p>
                             </div>
                             </div> 
