@@ -5,26 +5,38 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Overview() {
     const [products, setProducts] = useState([]);
+    const [ orders, setOrders ] = useState([]);
     const navigate = useNavigate();
+    const totalRevenue = orders.reduce(
+    (total, order) => total + Number(order.amount),
+    0
+);
 
     useEffect(() => {
-        const fetchProducts = async () => {
-            const { data, error } = await supabase
-                .from('products')
-                .select('*');
+    const fetchData = async () => {
+        const { data: products, error: productsError } = await supabase
+            .from('products')
+            .select('*');
 
-            if (error) {
-                console.error('Error fetching products:', error);
-            } else {
-                setProducts(data);
-            }
-        };
+        const { data: orders, error: ordersError } = await supabase
+            .from('orders')
+            .select('*');
 
-        fetchProducts();
-    }, []);
+        if (productsError) {
+            console.error('Error fetching products:', productsError);
+        } else {
+            setProducts(products);
+        }
 
+        if (ordersError) {
+            console.error('Error fetching orders:', ordersError);
+        } else {
+            setOrders(orders);
+        }
+    };
 
-
+    fetchData();
+}, []);
 
     return (
         <div className="flex w-full flex-4 flex-col p-4 sm:p-5">
@@ -36,17 +48,17 @@ export default function Overview() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97C9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box-icon lucide-box"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
                 </div>
                 <div>
-                <p className="text-xs font-outift font-semibold text-gray-500">Total Products</p>
-                <p className="text-lg font-inter font-semibold">13</p>
+                <p className="text-[10px] font-outift font-semibold tracking-wide text-gray-500 lg:text-xs">Total Products</p>
+                <p className="text-sm font-inter font-semibold lg:text-lg">{products.length}</p>
                 </div>
               </div>
               <div className="bg-white flex gap-5 items-center p-4 rounded-sm shadow"> {/*Card 2*/}
-                <div className="h-10 w-10 bg-[#FAF5E4] flex items-center justify-center rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gold" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handbag-icon lucide-handbag"><path d="M2.048 18.566A2 2 0 0 0 4 21h16a2 2 0 0 0 1.952-2.434l-2-9A2 2 0 0 0 18 8H6a2 2 0 0 0-1.952 1.566z"/><path d="M8 11V6a4 4 0 0 1 8 0v5"/></svg>
+                <div className="h-10 w-10 bg-[#EFF6FF] flex items-center justify-center rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handbag-icon lucide-handbag"><path d="M2.048 18.566A2 2 0 0 0 4 21h16a2 2 0 0 0 1.952-2.434l-2-9A2 2 0 0 0 18 8H6a2 2 0 0 0-1.952 1.566z"/><path d="M8 11V6a4 4 0 0 1 8 0v5"/></svg>
                 </div>
                 <div>
-                <p className="text-xs font-outift font-semibold text-gray-500">Total Orders</p>
-                <p className="text-lg font-inter font-semibold">25</p>
+                <p className="text-[10px] font-outift font-semibold tracking-wide text-gray-500 lg:text-xs">Total Orders</p>
+                <p className="text-sm font-inter font-semibold lg:text-lg">{orders.length}</p>
                 </div>
               </div>
               <div className="bg-white flex gap-5 items-center p-4 rounded-sm shadow"> {/*Card 3*/}
@@ -54,8 +66,8 @@ export default function Overview() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark-icon lucide-landmark"><path d="M10 18v-7"/><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg>
                 </div>
                 <div>
-                <p className="text-xs font-outift font-semibold text-gray-500">Total Revenue</p>
-                <p className="text-lg font-inter font-semibold">₦ 275,000</p>
+                <p className="text-[10px] font-outift font-semibold tracking-wide text-gray-500 lg:text-xs">Total Revenue</p>
+                <p className="text-sm font-inter font-semibold lg:text-lg">₦{totalRevenue.toLocaleString()}</p>
                 </div>
               </div>
             </div>
@@ -65,7 +77,7 @@ export default function Overview() {
             </button>
 
             <div className="mt-4 overflow-hidden bg-white"> {/*Products Table Container*/}
-              <div className="py-4"> {/*Table header*/}
+              <div className="py-4 bg-gray-50"> {/*Table header*/}
                 <h2 className="text-sm font-outfit font-semibold">Products</h2>
                 <p className="text-xs font-outfit text-gray-500">Manage your hair products</p>
               </div>
