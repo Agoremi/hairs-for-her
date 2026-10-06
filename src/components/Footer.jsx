@@ -6,17 +6,26 @@ export default function Footer(){
         <footer className="bg-black pt-5 text-white relative overflow-x-hidden lg:pt-2.5">
           <div className="relative z-20 px-5 pb-5 pt-4 flex flex-col lg:px-15 lg:pt-8">
             <div className="flex flex-col gap-10 items-stretch justify-between w-full lg:flex-row">
-            <div className="flex-1 bg-black w-full self-stretch lg:border-r lg:border-b-0">
+            <div className="flex-1 bg-black w-full self-stretch">
                 <img src={BlackLogo} alt="Hairs for her logo" className="w-18 h-auto" />
             </div>
 
-            <div className="flex-1 bg-black w-full self-stretch text-white lg:border-r lg:border-b-0">
+            <div className="flex-1 bg-black w-full self-stretch text-white">
                 <h1 className="text-sm font-semibold font-montserrat text-gray-200 mb-2 tracking-widest">DISCOVER</h1>
                 <ul className="space-y-3 text-gray-300">
-                    <li><Link to="/" className="text-sm font-outfit">Home</Link></li>
-                    <li><Link to="/shop" className="text-sm font-outfit">Shop</Link></li>
-                    <li><Link to="/about" className="text-sm font-outfit">About</Link></li>
-                    <li><Link to="/contact" className="text-sm font-outfit">Contact</Link></li>
+                    <li><Link to="/" className="text-sm font-outfit hover:underline">Home</Link></li>
+                    <li><Link to="/shop" className="text-sm font-outfit hover:underline">Shop</Link></li>
+                    <li><Link to="/about" className="text-sm font-outfit hover:underline">About</Link></li>
+                    <li><Link to="/contact" className="text-sm font-outfit hover:underline">Contact</Link></li>
+                </ul>
+            </div>
+            <div className="flex-1 bg-black w-full self-stretch text-white">
+                <h1 className="text-sm font-semibold font-montserrat text-gray-200 mb-2 tracking-widest">POLICIES</h1>
+                <ul className="space-y-3 text-gray-300">
+                    <li><Link to="/delivery-policy" className="text-sm font-outfit hover:underline">Delivery Policy</Link></li>
+                    <li><Link to="/return-policy" className="text-sm font-outfit hover:underline">Return Policy</Link></li>
+                    <li><Link to="/privacy-policy" className="text-sm font-outfit hover:underline">Privacy Policy</Link></li>
+                    <li><Link to="/terms-and-conditions" className="text-sm font-outfit hover:underline">Terms of Service</Link></li>
                 </ul>
             </div>
             <div className="flex-1 bg-black w-full self-stretch text-white">
@@ -64,7 +73,7 @@ export default function Footer(){
             </div>
           </div>
 
-            <div className="flex gap-4 flex-col items-center justify-center mt-5 lg:mt-8">
+            <div className="flex gap-4 flex-col items-center justify-center mt-5 lg:mt-4">
               <hr className="w-full" />
               <p className="text-xs text-gray-200">© 2026 Hairs For Her. All rights reserved.</p>
             </div>
