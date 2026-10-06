@@ -44,7 +44,7 @@ export default function Header(){
             className="w-18 h-auto object-contain"
           />
 
-            <ul className="hidden text-sm tracking-wide font-outfit space-x-4 text-gray-800 lg:flex">
+            <ul className="hidden text-xs font-semibold tracking-wide font-montserrat space-x-4 text-gray-800 lg:flex">
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/about">About</NavLink></li>
                 <li><NavLink to="/shop">Shop</NavLink></li>
