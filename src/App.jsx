@@ -14,10 +14,6 @@ import AdminLogin from "./AdminLogin";
 import AdminRoute from "./AdminRoute";  
 import PaymentSuccess from "./pages/PaymentSuccess";
 import Order from "./pages/Order";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Terms from "./pages/Terms";
-import DeliveryPolicy from "./pages/DeliveryPolicy";
-import RefundPolicy from "./pages/RefundPolicy";
 import { ToastContainer } from "react-toastify";
 
 export default function App() {
@@ -34,10 +30,6 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/payment-success" element={<PaymentSuccess />} />
         <Route path="/order" element={<Order />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/delivery-policy" element={<DeliveryPolicy />} />
-        <Route path="/refund-policy" element={<RefundPolicy />} />
         </Route>
 
         {/* Admin */}
