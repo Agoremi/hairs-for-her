@@ -84,7 +84,7 @@ export default function Shop(){
                 <p className="text-[10px] font-montserrat text-[#db6b9a] tracking-widest font-normal lg:text-xs">OUR COLLECTION</p>
                 <span className="h-[0.5px] w-6 bg-linear-to-tl from-[#ffffff] via-[#e88cab] to-[#f7c8d5]"></span>
                 </div>
-                <h1 className="text-[27px] text-gray-800 font-playfair tracking-wide lg:text-5xl">Premium Hair Extensions</h1>
+                <h1 className="text-[27px] text-gray-800 text-center font-playfair tracking-wide lg:text-5xl">Premium Hair Extensions</h1>
                 <p className="text-[9px] text-gray-600 mt-1 font-montserrat font-semibold tracking-widest">BEAUTY . QUALITY . CONFIDENCE</p>
                 <div className="flex gap-2 items-center"> {/*title div*/}
                     <span className="w-10 h-[0.6px] bg-linear-to-tl from-[#ffffff] via-[#e88cab] to-[#f7c8d5]"></span>
