@@ -35,8 +35,8 @@ const handleDelete = async () => {
         </div>
       </td>
       <td className="py-3 text-xs font-outfit text-gray-700">{product.category}</td>
-      <td className="py-3 text-xs font-outfit text-[#D97C9A] font-semibold">₦ {product.price}</td>
-      <td className="py-3 text-xs font-outfit text-green-500 font-semibold">{product.stock}</td>
+      <td className="py-3 text-xs font-outfit text-[#D97C9A] font-semibold">₦ {product.price.toLocaleString()}</td>
+      <td className="py-3 text-xs font-outfit text-green-600 tracking-wider font-semibold">{product.stock}</td>
       <td className="py-3 text-xs font-outfit text-gray-700">
         <span className={`inline-flex items-center justify-center rounded-full px-3 py-1 text-[10px] font-bold font-outfit tracking-wide ${product.status === "active" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}` }>
           {product.status}
