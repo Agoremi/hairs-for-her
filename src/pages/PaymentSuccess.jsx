@@ -106,8 +106,8 @@ export default function PaymentSuccess({ setPaymentSuccess, email, reference }) 
         </button>
       </div>
 
-      <p className="mt-4 text-xs text-gray-500 font-outfit tracking-wide flex lg:mt-0">
-        Need help?
+      <p className="mt-4 text-sm text-gray-500 font-outfit tracking-wide flex lg:mt-0">
+        To proceed with delivery,
          <button
             type="button" onClick={handleWhatsAppOrder}
             className="text-[#db6b9a] hover:underline flex items-center gap-1 ml-1">
