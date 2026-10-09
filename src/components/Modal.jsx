@@ -126,7 +126,6 @@ export default function Modal({ isOpen, onClose, product, productList = [] }) {
                             setPaymentReference(transaction?.reference || "");
                         }}
                          />
-                        <p className="text-[10px] font-outfit text-gray-500">Clicking the button will redirect you to WhatsApp</p>
                     </div>
                 </div>
             </div>
